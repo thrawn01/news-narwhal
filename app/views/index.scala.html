@@ -1,7 +1,78 @@
-@(message: String)
+@()
 
-@main("Welcome to Play 2.0") {
-    
-    @play20.welcome(message)
-    
-}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>news-narwhal</title>
+    <meta name="viewport" content="width=1024" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css" type="text/css" />
+</head>
+
+<body class="listing-page">
+<div id="header">
+    <div id="header-bottom-left">
+        <a href="http://news-narwhal.org" id="header-img" class="default-header" title="">news-narwhal.org</a>
+        <ul class="tabmenu">
+            <li class="selected"> <a href="http://news-narwhal.org">hot</a></li>
+            <li><a href="http://news-narwhal.org/new">new</a></li>
+            <li><a href="http://news-narwhal.org/saved">saved</a></li>
+        </ul>
+    </div>
+
+    <div id="header-bottom-right">
+        <a href="https://news-narwhal.org/login">login or register</a>
+    </div>
+</div>
+<div class="content">
+    <div class="spacer">
+        <div id="siteTable" class="sitetable">
+            <div class="link">
+                <!-- Begin Articles -->
+                <p class="parent"></p><span class="rank" style="width:2.20ex;">1</span>
+                <div class="midcol" style="width:5ex;">
+                    <div class="arrow up " onclick="up_vote(this)"></div>
+                    <div class="score dislikes"> 3330 </div>
+                    <div class="score"> 3331 </div>
+                    <div class="score likes"> 3332 </div>
+                    <div class="arrow down" onclick="down_vote(this)"></div>
+                </div>
+
+                <!-- Optional Image
+                <a class="thumbnail" href="http://imgace.com/wp-content/uploads/2012/08/welcome-to-the-internet.jpg">
+                <img src="files/images/53fba53.png" width="70" height="46" alt="" /></a>
+                -->
+
+                <div class="entry">
+                    <p class="title">
+                        <a class="title" href="http://imgace.com/wp-content/uploads/2012/08/welcome-to-the-internet.jpg">Welcome to the internet</a>
+                        <span class="domain">(<a href="http://news-narwhal.org/domain/imgace.com/">imgace.com</a>)</span>
+                    </p>
+
+                    <p class="tagline">submitted 4 hours ago by
+                        <a href="http://news-narwhal.org/user/thrawn01" class="author">thrawn01</a>to
+                        <a href="http://news-narwhal.org/r/pics/" class="subreddit">pics</a>
+                    </p>
+
+                    <ul class="buttons">
+                        <li>
+                            <a class="comments" href="http://news-narwhal.org/comments/14g6ee/welcome_to_the_internet"
+                               target= "_parent">49 comments</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Articles -->
+                <p class="nextprev">view more: <a href="http://news-narwhal.org/?count=25&amp;page=1" rel="nofollow next">next ›</a></p>
+            </div>
+        </div>
+
+        <div class="footer-parent">
+            <p class="bottommenu">Rendered using <a href="http://http://www.playframework.org/">Scala Play</a> for <a href=
+                                                                                                                              "http://github.com/thrawn01/news-narwhal">news-narwhal</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

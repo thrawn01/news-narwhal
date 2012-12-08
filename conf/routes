@@ -2,8 +2,32 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                           controllers.Application.index
+
+# Session Login and Register
+GET     /pref                       controllers.Session.preferences()
+GET     /post/login                 controllers.Session.login()
+POST    /post/reg                   controllers.Session.register()
+GET     /login                      controllers.Session.index()
+GET     /logout                     controllers.Session.logout()
+
+# Main page
+GET     /                           controllers.Application.index(tag = "")
+GET     /new                        controllers.Application.latest(tag = "")
+GET     /saved                      controllers.Application.saved(tag = "")
+
+# Sub reddits
+GET     /r/:tag                     controllers.Application.index(tag: String)
+GET     /r/:tag/new                 controllers.Application.latest(tag: String)
+GET     /r/:tag/saved               controllers.Application.saved(tag: String)
+
+# User page
+GET     /user/:user                 controllers.Application.user(user: String)
+
+# Submit an article
+GET     /submit                     controllers.Application.submit()
+
+# List all articles for a specific domain
+GET     /domain/:name               controllers.Application.domain(name: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
