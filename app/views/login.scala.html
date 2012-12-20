@@ -1,0 +1,82 @@
+@()
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>news-narwhal</title>
+    <meta name="viewport" content="width=1024" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css" type="text/css" />
+</head>
+
+<body>
+<div id="header">
+    <div id="header-bottom-left">
+        <a href="http://news-narwhal.org" id="header-img" class="default-header" title="">news-narwhal.org</a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="login-form-section divide">
+        <h3>create a new account</h3>
+
+        <p class="tagline">all it takes is a username and password</p>
+
+        <form id="login_reg" method="post" action="https://news-narwhal.com/post/reg" class="user-form register-form" name="login_reg">
+            <div>
+                <ul>
+                    <li class="name-entry">
+                        <label for="user_reg">username:</label>
+                        <input value="" name="user" id="user_reg" type="text" maxlength="20" tabindex="3" autofocus="" />
+                        <span class="notice-taken">try another</span>
+                        <span class="notice-available">available!</span>
+                    </li>
+
+                    <li>
+                        <label for="email_reg">email: &nbsp;<i>(optional)</i></label>
+                        <input value="" name="email" id="email_reg" type="text" maxlength="50" tabindex="3" />
+                    </li>
+
+                    <li><label for="passwd_reg">password:</label><input id="passwd_reg" name="passwd" type="password" tabindex="3" /></li>
+                    <li><label for="passwd2_reg">verify password:</label><input name="passwd2" id="passwd2_reg" type="password" tabindex="3" /></li>
+                    <li><input type="checkbox" name="rem" id="rem_reg" tabindex="3" /><label for="rem_reg" class="remember">remember me</label></li>
+                </ul>
+
+                <p class="submit"><button type="submit" class="button" tabindex="3">create account</button></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="login-form-section">
+        <h3>login</h3>
+
+        <p class="tagline">already have an account and just want to login?</p>
+
+        <form id="login_login" method="post" action="https://news-narwhal.com/post/login" class="user-form login-form" name="login_login">
+            <input type="hidden" name="op" value="login" /><input type="hidden" name="dest" value="/" />
+
+            <div>
+                <ul>
+                    <li class="name-entry">
+                        <label for="user_login">username:</label>
+                        <input value="" name="user" id="user_login" type="text" maxlength="20" tabindex="2" autofocus="" />
+                    </li>
+
+                    <li><label for="passwd_login">password:</label><input id="passwd_login" name="passwd" type="password" tabindex="2" /></li>
+                    <li><input type="checkbox" name="rem" id="rem_login" tabindex="2" /><label for="rem_login" class="remember">remember me</label></li>
+                    <li><a class="recover-password" href="https://news-narwhal.com/password">recover password</a></li>
+                </ul>
+
+                <p class="submit"><button type="submit" class="button" tabindex="2">login</button></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer-parent">
+        <p class="bottommenu">Rendered using <a href="http://http://www.playframework.org/">Scala Play</a> for <a href="http://github.com/thrawn01/news-narwhal">news-narwhal</a></p>
+    </div>
+</div>
+</body>
+</html>

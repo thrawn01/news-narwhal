@@ -9,6 +9,7 @@ GET     /post/login                 controllers.Session.login()
 POST    /post/reg                   controllers.Session.register()
 GET     /login                      controllers.Session.index()
 GET     /logout                     controllers.Session.logout()
+GET     /password                   controllers.Session.password()
 
 # Main page
 GET     /                           controllers.Application.index(tag = "")

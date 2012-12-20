@@ -48,7 +48,7 @@ a {
 
 #header-img.default-header {
     text-indent:-9999px;
-    background-image:url(/assets/images/news-narwhal-logo.png);
+    background-image:url(assets/images/news-narwhal-logo.png);
     background-repeat:no-repeat;
     height:40px;
     width:120px;
@@ -130,22 +130,22 @@ a {
 }
 
 .arrow.upmod {
-    background-image:url(/assets/images/up-arrow-mod.png);
+    background-image:url(assets/images/up-arrow-mod.png);
     background-repeat:no-repeat;
 }
 
 .arrow.downmod {
-    background-image:url(/assets/images/down-arrow-mod.png);
+    background-image:url(assets/images/down-arrow-mod.png);
     background-repeat:no-repeat;
 }
 
 .arrow.up {
-    background-image:url(/assets/images/up-arrow.png);
+    background-image:url(assets/images/up-arrow.png);
     background-repeat:no-repeat;
 }
 
 .arrow.down {
-    background-image:url(/assets/images/down-arrow.png);
+    background-image:url(assets/images/down-arrow.png);
     background-repeat:no-repeat;
 }
 
@@ -409,4 +409,77 @@ a.author {
     margin:0 5px;
     overflow:hidden;
     width:70px;
+}
+
+.login-form-section {
+    float: left;
+    width: 46%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.login-form-section h3 {
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: #404040;
+}
+.login-form-section p {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #606060;
+    margin-bottom: 20px;
+}
+
+.divide {
+    border-right: 2px solid #D3D3D3;
+    margin-right: -2px;
+}
+
+.user-form label {
+    display: block;
+    font-weight: bold;
+    color: #606060;
+}
+.user-form .error { margin-left: 5px }
+.user-form .remember {
+    display: inline;
+    margin-left: 5px;
+}
+.user-form ul { margin: 5px }
+.user-form li { margin-top: 5px }
+.user-form p .btn { margin-top: 5px }
+.user-form input.logtxt { width: 125px }
+.user-form input[type=text],
+.user-form input[type=password] {
+    width: 125px;
+    border: 1px solid #A0A0A0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+.user-form .submit { margin-top: 10px }
+
+.register-form .name-entry * { vertical-align: middle }
+.notice-taken,
+.notice-available {
+    display: none;
+    margin-left: 6px;
+    line-height: 16px;
+}
+.register-form.name-taken .notice-taken,
+.register-form.name-available .notice-available { display: inline-block }
+.register-form .name-entry .throbber {
+    display: none;
+    margin-left: 5px;
+}
+.register-form.name-checking .name-entry .throbber { display: inline-block }
+
+.button {
+    border-collapse: collapse;
+    color: gray;
+    text-align: center;
+    margin: 1px;
+    color: #369;
 }
